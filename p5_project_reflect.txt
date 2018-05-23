@@ -1,0 +1,25 @@
+Aigin Bernstein
+5/6/18
+Computer Science
+Ms. Tanzosh
+p5 Project Reflection
+
+My experience with working with a partner was extremely helpful to the development of our program, and my overall knowledge of how
+javascript works and the different algorithms associated with it. To make our coding process as efficient as possible, my partner,
+Nahiyan, and I shared a workspace with each other so we were both able to work on the code simultaneously with the ideas coming from
+both of us constantly flowing into the program. For example, if Nahiyan had an idea of something that might have improved our program,
+he would write it in the program so that I was able to see his changes and evaluate them. If his idea benefited the program, I would
+keep it as it was, but if his idea did not work correctly, I would do my best to fix the problem. If I wasn't able to fix a problem,
+I would call over the TA, and expert, or the teacher for assistance. Overall, I would say that Nahiyan and I contributed equally
+towards the final product of our program. In our program, we created a game similar to flappy bird, where a ball jumps whenever the
+space bar is pressed and falls because of the gravity when nothing is being pressed. When approaching the movement (or jumping) of
+the ball, we defined the y value, x value, gravity value, lift value, and velocity values. However, when we viewed the program when
+it was being run, the ball did not seem to move at all. We spent a large amount of time looking for the solution of the problem but we
+couldn't seem to find it. Then, we thought to ourselves, "The only way the ball is going to move is if something is pressed", so we
+incorporated a "keyPressed" function into our program, which made the ball jump whenever the space bar was pressed. Another problem
+that we encountered was that we completely forgort to implement the function setup and function draw functions into our program, so
+when we ran it, nothing even showed up. Although our program was rather simple overall, our most complex algorithms are related to
+the movement of the ball. To make the movement of the ball as realistic as possible, we used this.velocity += this.lift and
+this.velocity += this.gravity to ensure that the movement of the ball would be proportional to the movement of the bird in the actual
+flappy bird game. Also, we assigned values to lift, gravity, and velocity, so our the movement of the ball wouldn't be too
+exaggerated.
