@@ -2,7 +2,7 @@ var ball;
 var pipes = [];
 var was_hit = false;
 function setup() {
-    createCanvas(800, 800);
+    createCanvas(500, 700);
     ball = new Ball();
     pipes.push(new Pipe());
 }
@@ -19,6 +19,7 @@ function draw() {
             ball.velocity = 0;
             console.log("hit");
             was_hit = true;
+
         }
 
         if (pipes[i].offscreen()) {
@@ -26,6 +27,8 @@ function draw() {
         }
         if(was_hit && ball.y == height){
             noLoop()
+            alert("GAME OVER: TRY AGAIN");
+            reset();
         }
 
 }
@@ -52,7 +55,7 @@ function Ball() {
 
     this.show = function () {
         fill(255, 255, 66);
-        ellipse(this.x, this.y, 32, 32);
+        ellipse(this.x, this.y, 50, 50);
     }
 
     this.up = function () {
@@ -80,8 +83,8 @@ function Pipe() {
     this.top = random(height/2);
     this.bottom = random(height/2);
     this.x = width;
-    this.w = 60;
-    this.speed = 2.5;
+    this.w = 100;
+    this.speed = 3.5;
 
     this.highlight = false;
 
@@ -117,4 +120,11 @@ function Pipe() {
             return false;
         }
     }
+}
+
+function reset() {
+     ball = new Ball();
+     pipes=[];
+     //pipes.push(new Pipe());
+     loop();
 }
